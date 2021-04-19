@@ -1,1 +1,1 @@
-# ParticalEffect-Editor
+# ParticalEffectEditor
