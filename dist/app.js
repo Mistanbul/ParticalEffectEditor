@@ -633,7 +633,7 @@ var Menu = [{
       _Preview__WEBPACK_IMPORTED_MODULE_2__["View"].grid.visible = !_Preview__WEBPACK_IMPORTED_MODULE_2__["View"].grid.visible;
     }
   }, {
-    label: '辅助坐标轴开关',
+    label: '辅助轴开关',
     click: function click() {
       _Preview__WEBPACK_IMPORTED_MODULE_2__["View"].helper.visible = !_Preview__WEBPACK_IMPORTED_MODULE_2__["View"].helper.visible;
     }
@@ -991,11 +991,10 @@ View.frames_this_second = 0;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Sidebar_Logo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Sidebar/Logo */ "./src/components/Sidebar/Logo.vue");
-/* harmony import */ var _Sidebar_InputGroup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar/InputGroup */ "./src/components/Sidebar/InputGroup.vue");
-/* harmony import */ var _Sidebar_Curve__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sidebar/Curve */ "./src/components/Sidebar/Curve.vue");
-/* harmony import */ var _curves__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../curves */ "./src/curves.js");
-/* harmony import */ var _input_structure__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../input_structure */ "./src/input_structure.js");
+/* harmony import */ var _Sidebar_InputGroup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Sidebar/InputGroup */ "./src/components/Sidebar/InputGroup.vue");
+/* harmony import */ var _Sidebar_Curve__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sidebar/Curve */ "./src/components/Sidebar/Curve.vue");
+/* harmony import */ var _curves__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../curves */ "./src/curves.js");
+/* harmony import */ var _input_structure__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../input_structure */ "./src/input_structure.js");
 //
 //
 //
@@ -1026,7 +1025,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 
 
@@ -1035,27 +1033,26 @@ __webpack_require__.r(__webpack_exports__);
   name: 'sidebar',
   data: function data() {
     return {
-      data: _input_structure__WEBPACK_IMPORTED_MODULE_4__["default"]
+      data: _input_structure__WEBPACK_IMPORTED_MODULE_3__["default"]
     };
   },
   components: {
-    Logo: _Sidebar_Logo__WEBPACK_IMPORTED_MODULE_0__["default"],
-    InputGroup: _Sidebar_InputGroup__WEBPACK_IMPORTED_MODULE_1__["default"],
-    curve: _Sidebar_Curve__WEBPACK_IMPORTED_MODULE_2__["default"]
+    InputGroup: _Sidebar_InputGroup__WEBPACK_IMPORTED_MODULE_0__["default"],
+    curve: _Sidebar_Curve__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   methods: {
     fold: function fold(group) {
       group._folded = !group._folded;
 
       if (group.curves && !group._folded) {
-        Object(_curves__WEBPACK_IMPORTED_MODULE_3__["updateCurvesPanel"])();
+        Object(_curves__WEBPACK_IMPORTED_MODULE_2__["updateCurvesPanel"])();
       }
     },
     updateSize: function updateSize(e) {
-      Object(_curves__WEBPACK_IMPORTED_MODULE_3__["updateCurvesPanel"])();
+      Object(_curves__WEBPACK_IMPORTED_MODULE_2__["updateCurvesPanel"])();
     },
     addCurve: function addCurve() {
-      _input_structure__WEBPACK_IMPORTED_MODULE_4__["default"].effect.curves.curves.push(new _curves__WEBPACK_IMPORTED_MODULE_3__["Curve"]());
+      _input_structure__WEBPACK_IMPORTED_MODULE_3__["default"].effect.curves.curves.push(new _curves__WEBPACK_IMPORTED_MODULE_2__["Curve"]());
     }
   }
 });
@@ -1586,83 +1583,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Sidebar/Logo.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Sidebar/Logo.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'logo'
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/WarningDialog.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/WarningDialog.vue?vue&type=script&lang=js& ***!
@@ -2066,25 +1986,6 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, "\n.input_texture_wrapper img {\n\twidth: 100%;\n\theight: 100%;\n\tbackground-size: contain;\n\tbackground-repeat: no-repeat;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Sidebar/Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Sidebar/Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\nsvg[data-v-93a96464] {\n\theight: auto;\n\tpadding: 12px;\n\tfill: var(--color-text);\n\toverflow: hidden;\n}\n", ""]);
 
 // exports
 
@@ -7199,36 +7100,6 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./InputGroup.vue?vue&type=style&index=1&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Sidebar/InputGroup.vue?vue&type=style&index=1&lang=css&");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Sidebar/Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Sidebar/Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Sidebar/Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -62273,7 +62144,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("li", [
           _c("code", [_vm._v("variable.emitter_age")]),
-          _vm._v(" Age of the emitter")
+          _vm._v(" 发射器的寿命")
         ]),
         _vm._v(" "),
         _c("li", [
@@ -62303,7 +62174,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("li", [
           _c("code", [_vm._v("variable.particle_age")]),
-          _vm._v(" Age of the particle")
+          _vm._v(" 粒子的寿命")
         ]),
         _vm._v(" "),
         _c("li", [
@@ -63679,145 +63550,6 @@ var render = function() {
       )
     }),
     0
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Sidebar/Logo.vue?vue&type=template&id=93a96464&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Sidebar/Logo.vue?vue&type=template&id=93a96464&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "svg",
-    {
-      attrs: {
-        "xmlns:dc": "http://purl.org/dc/elements/1.1/",
-        "xmlns:cc": "http://creativecommons.org/ns#",
-        "xmlns:rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "xmlns:svg": "http://www.w3.org/2000/svg",
-        xmlns: "http://www.w3.org/2000/svg",
-        "xmlns:sodipodi": "http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd",
-        "xmlns:inkscape": "http://www.inkscape.org/namespaces/inkscape",
-        width: "75.722267mm",
-        height: "8.9683867mm",
-        viewBox: "-0.1 0 90.866723 10.762064",
-        version: "1.1",
-        id: "logo",
-        "inkscape:version": "0.92.1 r15371",
-        "sodipodi:docname": "logo.svg"
-      }
-    },
-    [
-      _c(
-        "g",
-        {
-          attrs: {
-            "inkscape:label": "Layer 1",
-            "inkscape:groupmode": "layer",
-            id: "layer1",
-            transform: "translate(-46.836452,-154.97888)"
-          }
-        },
-        [
-          _c("path", {
-            staticStyle: { "stroke-width": "0.26458332" },
-            attrs: {
-              d:
-                "m 52.870828,157.77701 q -1.291447,-0.71298 -2.24658,-0.71298 -0.645724,0 -1.008944,0.2556 -0.349767,0.2556 -0.349767,0.76679 0,0.47084 0.511198,0.83406 0.524651,0.34977 1.385616,0.67263 0.699534,0.2556 1.197279,0.59192 0.497746,0.32286 0.820608,0.90132 0.336314,0.57846 0.336314,1.46633 0,0.7668 -0.403577,1.42597 -0.390125,0.64573 -1.156922,1.03585 -0.766797,0.37667 -1.829551,0.37667 -0.88787,0 -1.762288,-0.25559 -0.874418,-0.26906 -1.627762,-0.80716 l 0.860965,-1.52014 q 0.511198,0.37667 1.170374,0.61882 0.659177,0.24214 1.183828,0.24214 0.618818,0 1.076206,-0.25559 0.457388,-0.26906 0.457388,-0.86097 0,-0.7668 -1.439426,-1.33181 -0.847513,-0.33631 -1.412521,-0.64572 -0.565009,-0.30941 -0.982039,-0.88787 -0.403577,-0.57846 -0.403577,-1.45288 0,-1.27799 0.83406,-2.05824 0.847512,-0.78025 2.246581,-0.84752 1.103111,0 1.843003,0.2556 0.739892,0.24215 1.439426,0.69954 z",
-              id: "path4489"
-            }
-          }),
-          _vm._v(" "),
-          _c("path", {
-            staticStyle: { "stroke-width": "0.26458332" },
-            attrs: {
-              d:
-                "m 64.359122,155.38245 v 10.30468 h -0.05381 l -6.928079,-6.25545 0.04036,5.85187 h -1.977529 v -10.29122 h 0.08072 l 6.914626,6.34962 -0.04036,-5.9595 z",
-              id: "path4491"
-            }
-          }),
-          _vm._v(" "),
-          _c("path", {
-            staticStyle: { "stroke-width": "0.26458332" },
-            attrs: {
-              d:
-                "m 66.316683,160.34646 q 0,-1.34526 0.672629,-2.51564 0.686082,-1.17037 1.843004,-1.85645 1.170374,-0.69954 2.529085,-0.69954 1.358711,0 2.515633,0.69954 1.170374,0.68608 1.856456,1.85645 0.699534,1.17038 0.699534,2.51564 0,1.37216 -0.699534,2.52908 -0.686082,1.15692 -1.856456,1.84301 -1.156922,0.67262 -2.515633,0.67262 -1.372163,0 -2.529085,-0.67262 -1.156922,-0.68609 -1.843004,-1.84301 -0.672629,-1.15692 -0.672629,-2.52908 z m 2.017888,0 q 0,0.86096 0.403577,1.5874 0.41703,0.72644 1.116564,1.15692 0.712987,0.41703 1.573952,0.41703 0.83406,0 1.520142,-0.41703 0.686081,-0.43048 1.076206,-1.14347 0.390125,-0.72644 0.390125,-1.60085 0,-0.88787 -0.403578,-1.61431 -0.403577,-0.72644 -1.103111,-1.14347 -0.686082,-0.43048 -1.533594,-0.43048 -0.847513,0 -1.547047,0.43048 -0.686082,0.41703 -1.089659,1.14347 -0.403577,0.72644 -0.403577,1.61431 z",
-              id: "path4493"
-            }
-          }),
-          _vm._v(" "),
-          _c("path", {
-            staticStyle: { "stroke-width": "0.26458332" },
-            attrs: {
-              d:
-                "m 85.79623,165.71404 -2.354202,-5.86533 -2.744326,5.89223 -3.981964,-10.29122 h 2.286939 l 1.950624,5.7308 1.506689,-3.78018 -0.78025,-1.95062 h 1.937172 l 2.219676,5.5021 1.681572,-5.5021 h 2.098603 z",
-              id: "path4495"
-            }
-          }),
-          _vm._v(" "),
-          _c("path", {
-            staticStyle: { "stroke-width": "0.26458332" },
-            attrs: {
-              d:
-                "m 96.61799,157.77701 q -1.291447,-0.71298 -2.246581,-0.71298 -0.645723,0 -1.008943,0.2556 -0.349767,0.2556 -0.349767,0.76679 0,0.47084 0.511198,0.83406 0.52465,0.34977 1.385616,0.67263 0.699534,0.2556 1.197279,0.59192 0.497746,0.32286 0.820608,0.90132 0.336314,0.57846 0.336314,1.46633 0,0.7668 -0.403577,1.42597 -0.390125,0.64573 -1.156922,1.03585 -0.766797,0.37667 -1.829551,0.37667 -0.88787,0 -1.762288,-0.25559 -0.874418,-0.26906 -1.627762,-0.80716 l 0.860965,-1.52014 q 0.511198,0.37667 1.170374,0.61882 0.659177,0.24214 1.183827,0.24214 0.618819,0 1.076207,-0.25559 0.457388,-0.26906 0.457388,-0.86097 0,-0.7668 -1.439427,-1.33181 -0.847512,-0.33631 -1.41252,-0.64572 -0.565009,-0.30941 -0.982039,-0.88787 -0.403577,-0.57846 -0.403577,-1.45288 0,-1.27799 0.83406,-2.05824 0.847512,-0.78025 2.246581,-0.84752 1.103111,0 1.843003,0.2556 0.739892,0.24215 1.439426,0.69954 z",
-              id: "path4497"
-            }
-          }),
-          _vm._v(" "),
-          _c("path", {
-            staticStyle: { "stroke-width": "0.26458332" },
-            attrs: {
-              d:
-                "m 105.18707,155.38245 v 1.88337 h -2.40801 v 8.01773 h -1.95062 v -8.01773 h -2.313848 v -1.88337 z",
-              id: "path4499"
-            }
-          }),
-          _vm._v(" "),
-          _c("path", {
-            staticStyle: { "stroke-width": "0.26458332" },
-            attrs: {
-              d:
-                "m 106.12266,160.34646 q 0,-1.34526 0.67263,-2.51564 0.68608,-1.17037 1.843,-1.85645 1.17037,-0.69954 2.52908,-0.69954 1.35871,0 2.51564,0.69954 1.17037,0.68608 1.85645,1.85645 0.69954,1.17038 0.69954,2.51564 0,1.37216 -0.69954,2.52908 -0.68608,1.15692 -1.85645,1.84301 -1.15693,0.67262 -2.51564,0.67262 -1.37216,0 -2.52908,-0.67262 -1.15692,-0.68609 -1.843,-1.84301 -0.67263,-1.15692 -0.67263,-2.52908 z m 2.01788,0 q 0,0.86096 0.40358,1.5874 0.41703,0.72644 1.11657,1.15692 0.71298,0.41703 1.57395,0.41703 0.83406,0 1.52014,-0.41703 0.68608,-0.43048 1.07621,-1.14347 0.39012,-0.72644 0.39012,-1.60085 0,-0.88787 -0.40358,-1.61431 -0.40357,-0.72644 -1.10311,-1.14347 -0.68608,-0.43048 -1.53359,-0.43048 -0.84752,0 -1.54705,0.43048 -0.68608,0.41703 -1.08966,1.14347 -0.40358,0.72644 -0.40358,1.61431 z",
-              id: "path4501"
-            }
-          }),
-          _vm._v(" "),
-          _c("path", {
-            staticStyle: { "stroke-width": "0.26458332" },
-            attrs: {
-              d:
-                "m 123.52442,165.28355 -2.08515,-3.1479 h -1.3049 v 3.1479 h -1.95063 v -9.9011 h 2.99993 q 1.843,0 2.85194,0.90133 1.0224,0.88787 1.0224,2.43491 0,0.91478 -0.39012,1.72194 -0.37668,0.7937 -1.17038,1.25109 l 2.30039,3.59183 z m -3.39005,-5.03126 h 1.38561 q 0.7937,0 1.15692,-0.45739 0.36322,-0.47084 0.36322,-1.00894 0,-0.53811 -0.30941,-1.0224 -0.30941,-0.49774 -1.19728,-0.49774 h -1.39906 z",
-              id: "path4503"
-            }
-          }),
-          _vm._v(" "),
-          _c("path", {
-            staticStyle: { "stroke-width": "0.26458332" },
-            attrs: {
-              d:
-                "m 137.60317,154.97888 v 10.30467 h -1.95062 v -4.72185 l -3.22862,4.58733 h -0.0269 l -3.10754,-4.29137 v 4.42589 h -1.88336 v -10.30467 h 0.0134 l 5.01781,7.11641 5.13889,-7.11641 z",
-              id: "path4505"
-            }
-          })
-        ]
-      )
-    ]
   )
 }
 var staticRenderFns = []
@@ -77870,93 +77602,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/Sidebar/Logo.vue":
-/*!*****************************************!*\
-  !*** ./src/components/Sidebar/Logo.vue ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Logo_vue_vue_type_template_id_93a96464_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Logo.vue?vue&type=template&id=93a96464&scoped=true& */ "./src/components/Sidebar/Logo.vue?vue&type=template&id=93a96464&scoped=true&");
-/* harmony import */ var _Logo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Logo.vue?vue&type=script&lang=js& */ "./src/components/Sidebar/Logo.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _Logo_vue_vue_type_style_index_0_id_93a96464_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css& */ "./src/components/Sidebar/Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _Logo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Logo_vue_vue_type_template_id_93a96464_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Logo_vue_vue_type_template_id_93a96464_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "93a96464",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "src/components/Sidebar/Logo.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./src/components/Sidebar/Logo.vue?vue&type=script&lang=js&":
-/*!******************************************************************!*\
-  !*** ./src/components/Sidebar/Logo.vue?vue&type=script&lang=js& ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Logo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Sidebar/Logo.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./src/components/Sidebar/Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css&":
-/*!**************************************************************************************************!*\
-  !*** ./src/components/Sidebar/Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css& ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_style_index_0_id_93a96464_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Sidebar/Logo.vue?vue&type=style&index=0&id=93a96464&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_style_index_0_id_93a96464_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_style_index_0_id_93a96464_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_style_index_0_id_93a96464_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_style_index_0_id_93a96464_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
-/***/ "./src/components/Sidebar/Logo.vue?vue&type=template&id=93a96464&scoped=true&":
-/*!************************************************************************************!*\
-  !*** ./src/components/Sidebar/Logo.vue?vue&type=template&id=93a96464&scoped=true& ***!
-  \************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_template_id_93a96464_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Logo.vue?vue&type=template&id=93a96464&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/Sidebar/Logo.vue?vue&type=template&id=93a96464&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_template_id_93a96464_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Logo_vue_vue_type_template_id_93a96464_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
 /***/ "./src/components/WarningDialog.vue":
 /*!******************************************!*\
   !*** ./src/components/WarningDialog.vue ***!
@@ -78092,8 +77737,8 @@ var Curve = /*#__PURE__*/function () {
     this.svg_needs_update = false;
     this.inputs = {
       id: new _input__WEBPACK_IMPORTED_MODULE_3__["default"]({
-        label: 'Name',
-        info: 'The MoLang variable to be used later in MoLang expressions. Must begin with "variable."',
+        label: '名称',
+        info: 'MoLang变量稍后将在MoLang表达式中使用，名称必须以“variable”开头。',
         placeholder: 'variable.curve1',
         type: 'text',
         value: '',
@@ -78103,12 +77748,12 @@ var Curve = /*#__PURE__*/function () {
       }),
       mode: new _input__WEBPACK_IMPORTED_MODULE_3__["default"]({
         type: 'select',
-        label: 'Mode',
-        info: 'Curve interpolation type',
+        label: '模式',
+        info: '曲线插补类型',
         value: ['catmull_rom', 'linear'].includes(data.mode) ? data.mode : 'linear',
         options: {
-          catmull_rom: 'Catmull Rom',
-          linear: 'Linear' //bezier: 'Bezier',
+          catmull_rom: 'Catmull_Rom',
+          linear: '线性' //bezier: 'Bezier',
 
         },
         onchange: function onchange() {
@@ -78116,14 +77761,14 @@ var Curve = /*#__PURE__*/function () {
         }
       }),
       input: new _input__WEBPACK_IMPORTED_MODULE_3__["default"]({
-        label: 'Input',
-        info: 'Horizontal input',
+        label: '输入',
+        info: '输入水平',
         type: 'molang',
         value: data.input
       }),
       range: new _input__WEBPACK_IMPORTED_MODULE_3__["default"]({
-        label: 'Range',
-        info: 'Horizontal range that the input is mapped to',
+        label: '范围',
+        info: '输入映射到的水平范围',
         type: 'molang',
         value: data.range
       })
@@ -79823,142 +79468,142 @@ var Data = {
         mode: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_motion_mode',
           type: 'select',
-          label: 'Mode',
+          label: '模式',
           mode_groups: ['particle', 'motion'],
           options: {
-            dynamic: 'Dynamic',
-            parametric: 'Parametric',
-            "static": 'Static'
+            dynamic: '动态模式',
+            parametric: '参数模式',
+            "static": '静态模式'
           }
         }),
         linear_speed: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_motion_linear_speed',
-          label: 'Speed',
-          info: 'Starts the particle with a specified speed, using the direction specified by the emitter shape',
+          label: '速度',
+          info: '使用发射器形状指定的方向以指定的速度发射粒子',
           enabled_modes: ['dynamic'],
           required: true
         }),
         linear_acceleration: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_motion_linear_acceleration',
-          label: 'Acceleration',
-          info: 'The linear acceleration applied to the particle in blocks/sec/sec',
+          label: '加速度',
+          info: '应用于粒子的线性加速度，单位为块/二次方秒',
           axis_count: 3,
           enabled_modes: ['dynamic']
         }),
         linear_drag_coefficient: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_motion_linear_drag_coefficient',
-          label: 'Air Drag',
-          info: 'Think of this as air-drag.  The higher the value, the more drag evaluated every frame.',
+          label: '空气阻力',
+          info: '空气阻力的值越高，每帧粒子受到的的阻力越多。',
           enabled_modes: ['dynamic']
         }),
         relative_position: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_motion_relative_position',
-          label: 'Offset',
-          info: 'Directly set the position relative to the emitter',
+          label: '偏移',
+          info: '设置粒子相对于发射器的位置',
           axis_count: 3,
           enabled_modes: ['parametric']
         }),
         direction: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_motion_direction',
-          label: 'Direction',
-          info: 'Directly set the 3d direction of the particle',
+          label: '位置',
+          info: '设置粒子的3D位置',
           axis_count: 3,
           enabled_modes: ['parametric']
         })
       }
     },
     rotation: {
-      label: 'Rotation',
+      label: '旋转',
       _folded: true,
       inputs: {
         mode: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_rotation_mode',
           type: 'select',
-          label: 'Mode',
+          label: '模式',
           mode_groups: ['particle', 'rotation'],
           options: {
-            dynamic: 'Dynamic',
-            parametric: 'Parametric'
+            dynamic: '动态模式',
+            parametric: '参数模式'
           }
         }),
         initial_rotation: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_rotation_initial_rotation',
-          label: 'Start Rotation',
-          info: 'Specifies the initial rotation in degrees',
+          label: '初始旋转值',
+          info: '设置初始旋转值，单位为度',
           enabled_modes: ['dynamic']
         }),
         rotation_rate: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_rotation_rotation_rate',
-          label: 'Speed',
-          info: 'Specifies the spin rate in degrees/second',
+          label: '速度',
+          info: '设置旋转速度，单位为度/秒',
           enabled_modes: ['dynamic']
         }),
         rotation_acceleration: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_rotation_rotation_acceleration',
-          label: 'Acceleration',
-          info: 'Acceleration applied to the rotation speed of the particle in degrees/sec/sec.',
+          label: '加速度',
+          info: '设置对粒子的旋转速度施加的加速度，单位为度/二次方秒',
           enabled_modes: ['dynamic']
         }),
         rotation_drag_coefficient: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_rotation_rotation_drag_coefficient',
-          label: 'Air Drag',
-          info: 'Rotation resistance. Higher numbers will retard the rotation over time.',
+          label: '空气阻力',
+          info: '设置旋转时受到的空气阻力',
           enabled_modes: ['dynamic']
         }),
         rotation: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_rotation_rotation',
-          label: 'Rotation',
-          info: 'Directly set the rotation of the particle',
+          label: '旋转值',
+          info: '设置粒子的旋转值',
           enabled_modes: ['parametric']
         })
       }
     },
     lifetime: {
-      label: 'Lifetime',
+      label: '生命周期',
       _folded: true,
       inputs: {
         mode: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_lifetime_mode',
           type: 'select',
-          label: 'Mode',
+          label: '模式',
           mode_groups: ['particle', 'lifetime'],
           options: {
-            time: 'Time',
-            expression: 'Kill Expression'
+            time: '时长模式',
+            expression: '表达式模式'
           }
         }),
         max_lifetime: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_lifetime_max_lifetime',
-          label: 'Max Age',
-          info: 'Maximum age of the particle in seconds',
+          label: '最大寿命',
+          info: '填写粒子的最大寿命（以秒为单位）',
           value: 1,
           enabled_modes: ['time']
         }),
         kill_plane: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_lifetime_kill_plane',
-          label: 'Kill Plane',
+          label: '截止平面',
           type: 'number',
-          info: 'Particles that cross this plane expire. The plane is relative to the emitter, but oriented in world space. The four parameters are the usual 4 elements of a plane equation.',
+          info: '越过该平面的粒子将消失；平面相对于发射器，但面向世界空间。 这4个参数是平面方程式的4个值',
           axis_count: 4
         }),
         expiration_expression: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_lifetime_expiration_expression',
-          label: 'Kill Expression',
-          info: 'This expression makes the particle expire when true (non-zero)',
+          label: '截止表达式',
+          info: '表达式的值不为零时粒子将消失',
           enabled_modes: ['expression']
         }),
         expire_in: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_lifetime_expire_in',
-          label: 'Kill in Blocks',
-          info: 'List of blocks to that let the particle expire on contact. Block IDs have a namespace and are separated by a space character.',
+          label: '截止方块',
+          info: '粒子接触到列表内的方块时将消失',
           placeholder: 'minecraft:stone',
           axis_count: -1,
           type: 'text'
         }),
         expire_outside: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_lifetime_expire_outside',
-          label: 'Only in Blocks',
-          info: 'List of blocks outside of which the particle expires. Block IDs have a namespace and are separated by a space character.',
+          label: '边界方块',
+          info: '粒子到列表内的方块外面时将消失',
           placeholder: 'minecraft:air',
           axis_count: -1,
           type: 'text'
@@ -79966,15 +79611,15 @@ var Data = {
       }
     },
     texture: {
-      label: 'Texture',
+      label: '贴图',
       _folded: true,
       inputs: {
         path: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_path',
           type: 'text',
-          info: 'Path to the texture, starting from the texture pack. Example: textures/particle/snowflake',
+          info: '填写粒子特效贴图在资源包内的路径，例如: textures/particle/default',
           placeholder: 'textures/particle/particles',
-          label: 'Texture',
+          label: '贴图路径',
           updatePreview: function updatePreview() {
             Object(_emitter__WEBPACK_IMPORTED_MODULE_2__["updateMaterial"])();
           }
@@ -79990,17 +79635,17 @@ var Data = {
         mode: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_mode',
           type: 'select',
-          label: 'UV Mode',
+          label: 'UV模式',
           mode_groups: ['particle', 'texture'],
           options: {
-            "static": 'Static',
-            animated: 'Animated'
+            "static": '静态模式',
+            animated: '动态模式'
           }
         }),
         size: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_size',
-          label: 'Texture Size',
-          info: 'Resolution of the texture, used for UV mapping',
+          label: '贴图尺寸',
+          info: '填写UV贴图的分辨率',
           type: 'number',
           axis_count: 2,
           required: true,
@@ -80008,143 +79653,143 @@ var Data = {
         }),
         uv: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_uv',
-          label: 'UV Start',
-          info: 'UV start coordinates',
+          label: 'UV起始点',
+          info: '填写UV起始坐标',
           axis_count: 2,
           required: true,
           value: [0, 0]
         }),
         uv_size: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_uv_size',
-          label: 'UV Size',
-          info: 'UV size coordinates',
+          label: 'UV尺寸',
+          info: '填写UV尺寸的长宽',
           axis_count: 2,
           value: [16, 16]
         }),
         uv_step: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_uv_step',
-          label: 'UV Step',
-          info: 'UV Offset per frame',
+          label: 'UV偏移',
+          info: '填写UV每帧偏移量',
           axis_count: 2,
           enabled_modes: ['animated']
         }),
         frames_per_second: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_frames_per_second',
           label: 'FPS',
-          info: 'Animation frames per second',
+          info: '填写每秒动态帧数',
           type: 'number',
           enabled_modes: ['animated']
         }),
         max_frame: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_max_frame',
-          label: 'Max Frame',
-          info: 'Maximum amount of frames to draw from the flipbook',
+          label: '最大帧数',
+          info: '填写绘制的最大帧数',
           enabled_modes: ['animated']
         }),
         stretch_to_lifetime: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_stretch_to_lifetime',
-          label: 'Stretch To Lifetime',
+          label: '同步生命周期',
           type: 'checkbox',
           enabled_modes: ['animated']
         }),
         loop: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_texture_loop',
-          label: 'Loop',
+          label: '贴图循环',
           type: 'checkbox',
           enabled_modes: ['animated']
         })
       }
     },
     color: {
-      label: 'Color & Light',
+      label: '颜色&光照',
       _folded: true,
       inputs: {
         mode: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_color_mode',
           type: 'select',
-          label: 'Color Mode',
+          label: '颜色模式',
           mode_groups: ['particle', 'color'],
           options: {
-            "static": 'Static',
-            gradient: 'Gradient',
-            expression: 'Expression'
+            "static": '静态模式',
+            gradient: '渐变模式',
+            expression: '表达式模式'
           }
         }),
         picker: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_color_static',
-          label: 'Color',
+          label: '颜色',
           type: 'color',
           enabled_modes: ['static'],
-          info: 'Set a static color for all emitted particles. Transparency is supported when the material is "Blend".'
+          info: '设置所有发射粒子的静态颜色（材质为“Blend”时，支持透明度）'
         }),
         interpolant: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_color_interpolant',
-          label: 'Interpolant',
-          info: 'Color Gradient Interpolant. Hint: use a curve here!',
+          label: '渐变插值',
+          info: '填写颜色渐变的粒子曲线',
           enabled_modes: ['gradient']
         }),
         range: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_color_range',
-          label: 'Range',
-          info: 'Color Gradient Range',
+          label: '范围',
+          info: '填写颜色渐变度数',
           type: 'number',
           value: 1,
           enabled_modes: ['gradient']
         }),
         gradient: new _gradient__WEBPACK_IMPORTED_MODULE_1__["default"]({
           id: 'particle_color_gradient',
-          label: 'Gradient',
-          info: 'Gradient',
+          label: '渐变',
+          info: '调整渐变颜色范围',
           type: 'gradient',
           enabled_modes: ['gradient']
         }),
         expression: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_color_expression',
-          label: 'Color',
-          info: 'Set the color per particle using MoLang expressions in RGBA channels between 0 and 1. Alpha channel display is only supported with "Blend" material.',
+          label: '颜色r',
+          info: '在0和1之间的RGBA通道中，使用MoLang表达式设置每个粒子的颜色。Alpha通道显示仅支持“Blend”材质',
           axis_count: 4,
           enabled_modes: ['expression']
         }),
         light: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_color_light',
-          label: 'Environment Lighting',
+          label: '启用环境光',
           type: 'checkbox'
         })
       }
     },
     collision: {
-      label: 'Collision',
+      label: '碰撞',
       _folded: true,
       inputs: {
         enabled: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_collision_enabled',
-          label: 'Enabled',
-          info: 'Enables collision when true / non-zero or unset'
+          label: '碰撞启用式',
+          info: '当填写的表达式的值为真或非零时或未设置时启用碰撞'
         }),
         collision_drag: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_collision_collision_drag',
-          label: 'Collision Drag',
-          info: 'Alters the speed of the particle when it has collided',
+          label: '碰撞阻力',
+          info: '粒子碰撞时改变速度',
           type: 'number'
         }),
         coefficient_of_restitution: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_collision_coefficient_of_restitution',
-          label: 'Bounciness',
-          info: 'Set to 0.0 to not bounce, 1.0 to bounce back up to original hight',
+          label: '碰撞弹力',
+          info: '设置为0.0时表示不反弹，设置为1.0时表示反弹至初始高度',
           type: 'number'
         }),
         collision_radius: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_collision_collision_radius',
-          label: 'Collision Radius',
-          info: 'Used to minimize interpenetration of particles with the environment',
+          label: '碰撞半径',
+          info: '最小化粒子与环境的互穿',
           max: 0.5,
           required: true,
           type: 'number'
         }),
         expire_on_contact: new _input__WEBPACK_IMPORTED_MODULE_0__["default"]({
           id: 'particle_collision_expire_on_contact',
-          label: 'Expire On Contact',
-          info: 'Removes the particle when it hits a block',
+          label: '碰撞消失',
+          info: '粒子碰撞到方块时将消失',
           type: 'checkbox'
         })
       }

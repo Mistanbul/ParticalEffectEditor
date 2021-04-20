@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import Logo from './Sidebar/Logo'
 import InputGroup from './Sidebar/InputGroup';
 import curve from './Sidebar/Curve';
 import {Curve, updateCurvesPanel} from './../curves'
@@ -42,7 +41,7 @@ export default {
 	data() {return {
 		data: Data
 	}},
-	components: {Logo, InputGroup, curve},
+	components: {InputGroup, curve},
 	methods: {
 		fold: function(group) {
 			group._folded = !group._folded

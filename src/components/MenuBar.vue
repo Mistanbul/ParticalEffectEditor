@@ -61,7 +61,7 @@ const Menu = [
 		label: '查看',
 		children: [
 			{label: '网格开关', click: () => { View.grid.visible = !View.grid.visible }},
-			{label: '辅助坐标轴开关', click: () => { View.helper.visible = !View.helper.visible }},
+			{label: '辅助轴开关', click: () => { View.helper.visible = !View.helper.visible }},
 			{label: '截图', click: () => { View.screenshot() }},
 		]
 	},

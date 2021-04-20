@@ -326,132 +326,132 @@ const Data = {
 				}),
 				linear_speed: new Input({
 					id: 'particle_motion_linear_speed',
-					label: 'Speed',
-					info: 'Starts the particle with a specified speed, using the direction specified by the emitter shape',
+					label: '速度',
+					info: '使用发射器形状指定的方向以指定的速度发射粒子',
 					enabled_modes: ['dynamic'],
 					required: true
 				}),
 				linear_acceleration: new Input({
 					id: 'particle_motion_linear_acceleration',
-					label: 'Acceleration',
-					info: 'The linear acceleration applied to the particle in blocks/sec/sec',
+					label: '加速度',
+					info: '应用于粒子的线性加速度，单位为块/二次方秒',
 					axis_count: 3,
 					enabled_modes: ['dynamic'],
 				}),
 				linear_drag_coefficient: new Input({
 					id: 'particle_motion_linear_drag_coefficient',
-					label: 'Air Drag',
-					info: 'Think of this as air-drag.  The higher the value, the more drag evaluated every frame.',
+					label: '空气阻力',
+					info: '空气阻力的值越高，每帧粒子受到的的阻力越多。',
 					enabled_modes: ['dynamic']
 				}),
 				relative_position: new Input({
 					id: 'particle_motion_relative_position',
-					label: 'Offset',
-					info: 'Directly set the position relative to the emitter',
+					label: '偏移',
+					info: '设置粒子相对于发射器的位置',
 					axis_count: 3,
 					enabled_modes: ['parametric']
 				}),
 				direction: new Input({
 					id: 'particle_motion_direction',
-					label: 'Direction',
-					info: 'Directly set the 3d direction of the particle',
+					label: '位置',
+					info: '设置粒子的3D位置',
 					axis_count: 3,
 					enabled_modes: ['parametric']
 				}),
 			}
 		},
 		rotation: {
-			label: 'Rotation',
+			label: '旋转',
 			_folded: true,
 			inputs: {
 				mode: new Input({
 					id: 'particle_rotation_mode',
 					type: 'select',
-					label: 'Mode',
+					label: '模式',
 					mode_groups: ['particle', 'rotation'],
 					options: {
-						dynamic: 'Dynamic',
-						parametric: 'Parametric',
+						dynamic: '动态模式',
+						parametric: '参数模式',
 					},
 				}),
 				initial_rotation: new Input({
 					id: 'particle_rotation_initial_rotation',
-					label: 'Start Rotation',
-					info: 'Specifies the initial rotation in degrees',
+					label: '初始旋转值',
+					info: '设置初始旋转值，单位为度',
 					enabled_modes: ['dynamic']
 				}),
 				rotation_rate: new Input({
 					id: 'particle_rotation_rotation_rate',
-					label: 'Speed',
-					info: 'Specifies the spin rate in degrees/second',
+					label: '速度',
+					info: '设置旋转速度，单位为度/秒',
 					enabled_modes: ['dynamic']
 				}),
 				rotation_acceleration: new Input({
 					id: 'particle_rotation_rotation_acceleration',
-					label: 'Acceleration',
-					info: 'Acceleration applied to the rotation speed of the particle in degrees/sec/sec.',
+					label: '加速度',
+					info: '设置对粒子的旋转速度施加的加速度，单位为度/二次方秒',
 					enabled_modes: ['dynamic']
 				}),
 				rotation_drag_coefficient: new Input({
 					id: 'particle_rotation_rotation_drag_coefficient',
-					label: 'Air Drag',
-					info: 'Rotation resistance. Higher numbers will retard the rotation over time.',
+					label: '空气阻力',
+					info: '设置旋转时受到的空气阻力',
 					enabled_modes: ['dynamic']
 				}),
 				rotation: new Input({
 					id: 'particle_rotation_rotation',
-					label: 'Rotation',
-					info: 'Directly set the rotation of the particle',
+					label: '旋转值',
+					info: '设置粒子的旋转值',
 					enabled_modes: ['parametric']
 				})
 			}
 		},
 		lifetime: {
-			label: 'Lifetime',
+			label: '生命周期',
 			_folded: true,
 			inputs: {
 				mode: new Input({
 					id: 'particle_lifetime_mode',
 					type: 'select',
-					label: 'Mode',
+					label: '模式',
 					mode_groups: ['particle', 'lifetime'],
 					options: {
-						time: 'Time',
-						expression: 'Kill Expression',
+						time: '时长模式',
+						expression: '表达式模式',
 					}
 				}),
 				max_lifetime: new Input({
 					id: 'particle_lifetime_max_lifetime',
-					label: 'Max Age',
-					info: 'Maximum age of the particle in seconds',
+					label: '最大寿命',
+					info: '填写粒子的最大寿命（以秒为单位）',
 					value: 1,
 					enabled_modes: ['time']
 				}),
 				kill_plane: new Input({
 					id: 'particle_lifetime_kill_plane',
-					label: 'Kill Plane',
+					label: '截止平面',
 					type: 'number',
-					info: 'Particles that cross this plane expire. The plane is relative to the emitter, but oriented in world space. The four parameters are the usual 4 elements of a plane equation.',
+					info: '越过该平面的粒子将消失；平面相对于发射器，但面向世界空间。 这4个参数是平面方程式的4个值',
 					axis_count: 4
 				}),
 				expiration_expression: new Input({
 					id: 'particle_lifetime_expiration_expression',
-					label: 'Kill Expression',
-					info: 'This expression makes the particle expire when true (non-zero)',
+					label: '截止表达式',
+					info: '表达式的值不为零时粒子将消失',
 					enabled_modes: ['expression']
 				}),
 				expire_in: new Input({
 					id: 'particle_lifetime_expire_in',
-					label: 'Kill in Blocks',
-					info: 'List of blocks to that let the particle expire on contact. Block IDs have a namespace and are separated by a space character.',
+					label: '截止方块',
+					info: '粒子接触到列表内的方块时将消失',
 					placeholder: 'minecraft:stone',
 					axis_count: -1,
 					type: 'text'
 				}),
 				expire_outside: new Input({
 					id: 'particle_lifetime_expire_outside',
-					label: 'Only in Blocks',
-					info: 'List of blocks outside of which the particle expires. Block IDs have a namespace and are separated by a space character.',
+					label: '边界方块',
+					info: '粒子到列表内的方块外面时将消失',
 					placeholder: 'minecraft:air',
 					axis_count: -1,
 					type: 'text'
@@ -459,15 +459,15 @@ const Data = {
 			}
 		},
 		texture: {
-			label: 'Texture',
+			label: '贴图',
 			_folded: true,
 			inputs: {
 				path: new Input({
 					id: 'particle_texture_path',
 					type: 'text',
-					info: 'Path to the texture, starting from the texture pack. Example: textures/particle/snowflake',
+					info: '填写粒子特效贴图在资源包内的路径，例如: textures/particle/default',
 					placeholder: 'textures/particle/particles',
-					label: 'Texture',
+					label: '贴图路径',
 					updatePreview: function() {
 						updateMaterial()
 					}
@@ -483,17 +483,17 @@ const Data = {
 				mode: new Input({
 					id: 'particle_texture_mode',
 					type: 'select',
-					label: 'UV Mode',
+					label: 'UV模式',
 					mode_groups: ['particle', 'texture'],
 					options: {
-						static: 'Static',
-						animated: 'Animated',
+						static: '静态模式',
+						animated: '动态模式',
 					},
 				}),
 				size: new Input({
 					id: 'particle_texture_size',
-					label: 'Texture Size',
-					info: 'Resolution of the texture, used for UV mapping',
+					label: '贴图尺寸',
+					info: '填写UV贴图的分辨率',
 					type: 'number',
 					axis_count: 2,
 					required: true,
@@ -501,143 +501,143 @@ const Data = {
 				}),
 				uv: new Input({
 					id: 'particle_texture_uv',
-					label: 'UV Start',
-					info: 'UV start coordinates',
+					label: 'UV起始点',
+					info: '填写UV起始坐标',
 					axis_count: 2,
 					required: true,
 					value: [0, 0]
 				}),
 				uv_size: new Input({
 					id: 'particle_texture_uv_size',
-					label: 'UV Size',
-					info: 'UV size coordinates',
+					label: 'UV尺寸',
+					info: '填写UV尺寸的长宽',
 					axis_count: 2,
 					value: [16, 16]
 				}),
 				uv_step: new Input({
 					id: 'particle_texture_uv_step',
-					label: 'UV Step',
-					info: 'UV Offset per frame',
+					label: 'UV偏移',
+					info: '填写UV每帧偏移量',
 					axis_count: 2,
 					enabled_modes: ['animated']
 				}),
 				frames_per_second: new Input({
 					id: 'particle_texture_frames_per_second',
 					label: 'FPS',
-					info: 'Animation frames per second',
+					info: '填写每秒动态帧数',
 					type: 'number',
 					enabled_modes: ['animated']
 				}),
 				max_frame: new Input({
 					id: 'particle_texture_max_frame',
-					label: 'Max Frame',
-					info: 'Maximum amount of frames to draw from the flipbook',
+					label: '最大帧数',
+					info: '填写绘制的最大帧数',
 					enabled_modes: ['animated']
 				}),
 				stretch_to_lifetime: new Input({
 					id: 'particle_texture_stretch_to_lifetime',
-					label: 'Stretch To Lifetime',
+					label: '同步生命周期',
 					type: 'checkbox',
 					enabled_modes: ['animated']
 				}),
 				loop: new Input({
 					id: 'particle_texture_loop',
-					label: 'Loop',
+					label: '贴图循环',
 					type: 'checkbox',
 					enabled_modes: ['animated']
 				}),
 			}
 		},
 		color: {
-			label: 'Color & Light',
+			label: '颜色&光照',
 			_folded: true,
 			inputs: {
 				mode: new Input({
 					id: 'particle_color_mode',
 					type: 'select',
-					label: 'Color Mode',
+					label: '颜色模式',
 					mode_groups: ['particle', 'color'],
 					options: {
-						static: 'Static',
-						gradient: 'Gradient',
-						expression: 'Expression',
+						static: '静态模式',
+						gradient: '渐变模式',
+						expression: '表达式模式',
 					},
 				}),
 				picker: new Input({
 					id: 'particle_color_static',
-					label: 'Color',
+					label: '颜色',
 					type: 'color',
 					enabled_modes: ['static'],
-					info: 'Set a static color for all emitted particles. Transparency is supported when the material is "Blend".'
+					info: '设置所有发射粒子的静态颜色（材质为“Blend”时，支持透明度）'
 				}),
 				interpolant: new Input({
 					id: 'particle_color_interpolant',
-					label: 'Interpolant',
-					info: 'Color Gradient Interpolant. Hint: use a curve here!',
+					label: '渐变插值',
+					info: '填写颜色渐变的粒子曲线',
 					enabled_modes: ['gradient']
 				}),
 				range: new Input({
 					id: 'particle_color_range',
-					label: 'Range',
-					info: 'Color Gradient Range',
+					label: '范围',
+					info: '填写颜色渐变度数',
 					type: 'number',
 					value: 1,
 					enabled_modes: ['gradient']
 				}),
 				gradient: new Gradient({
 					id: 'particle_color_gradient',
-					label: 'Gradient',
-					info: 'Gradient',
+					label: '渐变',
+					info: '调整渐变颜色范围',
 					type: 'gradient',
 					enabled_modes: ['gradient']
 				}),
 				expression: new Input({
 					id: 'particle_color_expression',
-					label: 'Color',
-					info: 'Set the color per particle using MoLang expressions in RGBA channels between 0 and 1. Alpha channel display is only supported with "Blend" material.',
+					label: '颜色r',
+					info: '在0和1之间的RGBA通道中，使用MoLang表达式设置每个粒子的颜色。Alpha通道显示仅支持“Blend”材质',
 					axis_count: 4,
 					enabled_modes: ['expression']
 				}),
 				light: new Input({
 					id: 'particle_color_light',
-					label: 'Environment Lighting',
+					label: '启用环境光',
 					type: 'checkbox',
 				}),
 			}
 		},
 		collision: {
-			label: 'Collision',
+			label: '碰撞',
 			_folded: true,
 			inputs: {
 				enabled: new Input({
 					id: 'particle_collision_enabled',
-					label: 'Enabled',
-					info: 'Enables collision when true / non-zero or unset',
+					label: '碰撞启用式',
+					info: '当填写的表达式的值为真或非零时或未设置时启用碰撞',
 				}),
 				collision_drag: new Input({
 					id: 'particle_collision_collision_drag',
-					label: 'Collision Drag',
-					info: 'Alters the speed of the particle when it has collided',
+					label: '碰撞阻力',
+					info: '粒子碰撞时改变速度',
 					type: 'number',
 				}),
 				coefficient_of_restitution: new Input({
 					id: 'particle_collision_coefficient_of_restitution',
-					label: 'Bounciness',
-					info: 'Set to 0.0 to not bounce, 1.0 to bounce back up to original hight',
+					label: '碰撞弹力',
+					info: '设置为0.0时表示不反弹，设置为1.0时表示反弹至初始高度',
 					type: 'number',
 				}),
 				collision_radius: new Input({
 					id: 'particle_collision_collision_radius',
-					label: 'Collision Radius',
-					info: 'Used to minimize interpenetration of particles with the environment',
+					label: '碰撞半径',
+					info: '最小化粒子与环境的互穿',
 					max: 0.5,
 					required: true,
 					type: 'number',
 				}),
 				expire_on_contact: new Input({
 					id: 'particle_collision_expire_on_contact',
-					label: 'Expire On Contact',
-					info: 'Removes the particle when it hits a block',
+					label: '碰撞消失',
+					info: '粒子碰撞到方块时将消失',
 					type: 'checkbox',
 				}),
 			}

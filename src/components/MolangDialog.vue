@@ -6,13 +6,13 @@
             <h3>变量</h3>
             <ul>
                 <li><code>variable.emitter_lifetime</code> 发射器生命周期</li>
-                <li><code>variable.emitter_age</code> Age of the emitter</li>
+                <li><code>variable.emitter_age</code> 发射器的寿命</li>
                 <li><code>variable.emitter_random_1</code> 0到1之间的随机数, 每个发射周期中的值恒定</li>
                 <li><code>variable.emitter_random_2</code> 随机数</li>
                 <li><code>variable.emitter_random_3</code> 随机数</li>
                 <li><code>variable.emitter_random_4</code> 随机数</li>
                 <li><code>variable.particle_lifetime</code> 粒子生命周期</li>
-                <li><code>variable.particle_age</code> Age of the particle</li>
+                <li><code>variable.particle_age</code> 粒子的寿命</li>
                 <li><code>variable.particle_random_1</code> 0到1之间的随机数, 每个粒子的值恒定</li>
                 <li><code>variable.particle_random_2</code> 随机数</li>
                 <li><code>variable.particle_random_3</code> 随机数</li>
