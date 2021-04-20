@@ -1617,20 +1617,20 @@ function validate() {
 
   if (_emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_appearance_material != 'particles_blend' && (_emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_color_mode == 'static' && _emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_color_static.length == 9 && _emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_color_static.substr(-2).toUpperCase() != 'FF' || _emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_color_mode == 'expression' && ['', '1', '1.0'].includes(_emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_color_expression[3]) == false)) {
     errors.push({
-      text: "The effect attempts to use opacity but the material is not set to 'Blend'"
+      text: "\u8BE5\u7279\u6548\u5C1D\u8BD5\u4F7F\u7528\u4E0D\u900F\u660E\u5EA6\uFF0C\u4F46\u6750\u8D28\u672A\u8BBE\u7F6E\u4E3A\u201CBlend\u201D"
     });
   }
 
   if (_emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_appearance_facing_camera_mode.substr(0, 9) == 'direction') {
     if (_emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_motion_mode == 'dynamic' && !(_emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_motion_linear_speed && parseFloat(_emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_motion_linear_speed) != 0)) {
       errors.push({
-        text: "The particles are set to face a direction, but no speed is set. Only particles with an initial speed support directions"
+        text: "\u7C92\u5B50\u8BBE\u7F6E\u4E86\u65B9\u5411\uFF0C\u4F46\u672A\u8BBE\u7F6E\u901F\u5EA6\u3002 \u4EC5\u5177\u6709\u521D\u59CB\u901F\u5EA6\u7684\u7C92\u5B50\u652F\u6301\u65B9\u5411"
       });
     } else if (_emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_motion_mode == 'parametric' && _emitter__WEBPACK_IMPORTED_MODULE_0__["Config"].particle_motion_direction.find(function (v) {
       return v && parseFloat(v) != 0;
     })) {
       errors.push({
-        text: "The particles are set to face a direction, but no parametric direction is set"
+        text: "\u7C92\u5B50\u8BBE\u7F6E\u4E86\u65B9\u5411\uFF0C\u4F46\u672A\u8BBE\u7F6E\u53C2\u6570\u65B9\u5411"
       });
     }
   }
@@ -61787,7 +61787,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("Config")]
+              [_vm._v("配置")]
             ),
             _vm._v(" "),
             _c(
@@ -61801,7 +61801,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("Code")]
+              [_vm._v("代码")]
             ),
             _vm._v(" "),
             _c(
@@ -61815,7 +61815,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("Preview")]
+              [_vm._v("预览")]
             )
           ])
         : _vm._e()
