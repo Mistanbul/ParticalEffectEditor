@@ -29,15 +29,15 @@ function validate() {
             (Config.particle_color_mode == 'expression' && ['', '1', '1.0'].includes(Config.particle_color_expression[3]) == false)
         )
     ) {
-        errors.push({text: `The effect attempts to use opacity but the material is not set to 'Blend'`})
+        errors.push({text: `该特效尝试使用不透明度，但材质未设置为“Blend”`})
     }
 
     if (Config.particle_appearance_facing_camera_mode.substr(0, 9) == 'direction') {
         if (Config.particle_motion_mode == 'dynamic' && !(Config.particle_motion_linear_speed && parseFloat(Config.particle_motion_linear_speed) != 0)) {
-            errors.push({text: `The particles are set to face a direction, but no speed is set. Only particles with an initial speed support directions`})
+            errors.push({text: `粒子设置了方向，但未设置速度。 仅具有初始速度的粒子支持方向`})
 
         } else if (Config.particle_motion_mode == 'parametric' && Config.particle_motion_direction.find(v => v && parseFloat(v) != 0)) {
-            errors.push({text: `The particles are set to face a direction, but no parametric direction is set`})
+            errors.push({text: `粒子设置了方向，但未设置参数方向`})
         }
     }
 

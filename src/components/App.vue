@@ -20,9 +20,9 @@
 		<sidebar ref="sidebar" v-show="!portrait_view || tab == 'config'"></sidebar>
 
 		<ul v-if="portrait_view" id="portrait_mode_selector">
-        	<li class="mode_selector config" :class="{selected: tab == 'config'}" @click="setTab('config')">Config</li>
-        	<li class="mode_selector code" :class="{selected: tab == 'code'}" @click="setTab('code')">Code</li>
-        	<li class="mode_selector preview" :class="{selected: tab == 'preview'}" @click="setTab('preview')">Preview</li>
+        	<li class="mode_selector config" :class="{selected: tab == 'config'}" @click="setTab('config')">配置</li>
+        	<li class="mode_selector code" :class="{selected: tab == 'code'}" @click="setTab('code')">代码</li>
+        	<li class="mode_selector preview" :class="{selected: tab == 'preview'}" @click="setTab('preview')">预览</li>
 		</ul>
 
     </div>
