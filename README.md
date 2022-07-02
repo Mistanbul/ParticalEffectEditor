@@ -1,3 +1,3 @@
 # ParticalEffectEditor
 
-A Editor for GermEngine particle effect files. 
+A Editor For Bedrock Particle Effect Files. 
